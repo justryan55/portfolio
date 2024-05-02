@@ -37,11 +37,13 @@ export default function App() {
             imgSrc = {bookLibraryImg}
             title="Book Library"
             description="Explore and manage your book collection seamlessly with the JavaScript book library web app."
+            demoLink="/library"
           />
           <Project 
             imgSrc = {toDoImg}
             title="To Do List"
             description="Stay organized and productive with a JavaScript-powered to-do list web app. Easily manage tasks, set priorities, and track progress for increased efficiency."
+            demoLink="/to-do-list"
           />
         </div>
         <Bubbles />
