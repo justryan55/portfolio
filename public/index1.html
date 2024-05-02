@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style(etch).css">
+    <title>Etch-a-sketch</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Etch-a-sketch</h1>
+    </header>
+    <div class="sketchpad" id="container"></div>
+    <p id="text"></p>
+    <div class="user-inputs">
+            <label for="resize">
+            <input type="range" id="resize" min="2" max="100" value="30"></input>
+            </label>    
+            <label for="color">
+            <input type="color" id="color" name="color">
+            </label>
+    </div>
+    <div class="buttons">
+        <button id="clear">Clear</button>
+        <button id="undo">Undo</button>
+        <button id="save">Save</button>
+        <button id="load">Load</button>
+    </div>
+    <footer class="footer">
+        <a href="https://github.com/justryan55?tab=repositories" target="_blank" title="Gi5thub">
+            <img src="github-icon.png" alt="GitHub icon">
+        </a>
+    </footer>
+<script src="javascript(etch).js"></script>
+</body>
+</html>

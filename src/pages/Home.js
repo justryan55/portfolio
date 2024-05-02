@@ -30,7 +30,7 @@ export default function App() {
           <Project 
             imgSrc = {etchImg}
             title="Etch A Sketch"
-            description="Experience the nostalgia of the classic Etch A Sketch toy brought to the digital realm with this JavaScript-powered web app. Draw, erase, and save your creations effortlessly"
+            description="Experience the nostalgia of the classic Etch A Sketch toy brought to the digital realm with this JavaScript-powered web app. Draw, erase, and save your creations effortlessly."
             demoLink="/etch-a-sketch"
           />
           <Project 
