@@ -1,12 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-
-export default function Hello(){
+export default function EtchASketch(){
     return (
         <>
-            <div>Hello</div>
         </>
     )
 }
-
-
