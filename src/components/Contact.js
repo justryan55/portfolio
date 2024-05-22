@@ -7,15 +7,25 @@ export default function Contact(){
             <p className="contact-text">Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>
             <form>
                 <label htmlFor='name'>
-                    <input type="text" id="name" placeholder="Name"></input>
+                    <input type="text" 
+                           id="name" 
+                           placeholder="Name">
+                    </input>
                 </label>
                 <label htmlFor='email'>
-                    <input type="text" id="email" className="input-email" placeholder="Email"></input>
+                    <input type="text" 
+                           id="email" 
+                           className="input-email" 
+                           placeholder="Email">
+                    </input>
                 </label>
                 <label htmlFor='message'>
-                    <input type="text" id="message" className="input-message" placeholder="Message"></input>
+                    <textarea id="message" 
+                              className="input-message" 
+                              placeholder="Message">
+                    </textarea>
                 </label>
-                <button type="submit" className="submit-btn">Submit</button>
+                <button type='submit' className='submit-btn'>Submit</button>
             </form>
         </div>
     )
