@@ -23,7 +23,7 @@ export default function Contact(){
     }
 
     return (
-        <div className="contact-section">
+        <div className="contact-form">
             <div className="contact-header">Contact</div>
             <p className="contact-text">Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>
             <form ref={form} onSubmit={sendEmail}>

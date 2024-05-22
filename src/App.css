@@ -134,7 +134,8 @@
     justify-items: center;
     width: 80%;
     margin: 0 auto;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 .project-card {
@@ -202,6 +203,10 @@
 }
 
 .contact-section {
+    min-height: 70vh;
+}
+
+.contact-form {
     color: white;
     text-align: center;
     padding: 50px;
@@ -264,6 +269,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 .footer img {
@@ -283,4 +289,10 @@ form {
     to {
         transform: rotate(360deg);
     }
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
