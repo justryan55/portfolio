@@ -379,6 +379,10 @@ form {
         margin-bottom: 100px;
     }
 
+    .project-card {
+        padding-bottom: 85px;
+    }
+
     .contact-section {
         min-height: 60vh;
     }
