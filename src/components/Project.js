@@ -22,7 +22,7 @@ export default function Project({
             <p className="project-description">{description}</p>
             <div className="project-links">
                 <a href={demoLink} className="project-demo-link">Demo</a>
-                <a href={githubLink} className="project-hithub-link">Repo</a>
+                <a href={githubLink} className="project-github-link">Repo</a>
             </div>
         </div>
     )

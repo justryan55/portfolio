@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
     background: linear-gradient(to right,#007991, #222E50);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
 
 }
@@ -17,12 +19,27 @@
 }
 
 .header span {
-    padding: 0.1em;
+    padding-bottom: 8px;
+    text-shadow: 0em 0.05em rgb(0, 0, 0, 50%);
 }
 
 .intro-text {
     width: 50%;
     font-size: 0.5em;
+    margin-top: 7px; 
+}
+
+.arrow {
+    animation: bouncing 1s infinite ease-in-out;
+    display: block;
+    height: 50px;
+    position: absolute;
+}
+
+@keyframes bouncing {
+    0% {bottom: 0}
+    50% {bottom: 20px}
+    100% {bottom: 0}
 }
 
 .about {
@@ -35,6 +52,7 @@
 
 .section-header {
     padding-top: 50px;
+    padding-bottom: 15px;
     font-size: 2em;
 }
 
@@ -134,6 +152,7 @@
 
 .project-section {
     padding: 100px;
+    padding-bottom: 75px;
     font-size: 2em;
 }
 
@@ -151,8 +170,8 @@
     margin-bottom: 20px;
     color: white;
     height: 100vh;
-
 }
+
 .project-image {
     width: 300px;
     border-radius: 10%;
@@ -164,9 +183,26 @@
     border-radius: 10%;
 }
 
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
 .project-demo-link {
     padding-right: 40px;
 }
+
+.project-demo-link, 
+.project-github-link {
+    color: white;
+    text-decoration: none;
+}
+
+.project-demo-link:hover, 
+.project-github-link:hover {
+    color: #E9D985;
+}
+
 
 .project-description {
     text-align: center;
