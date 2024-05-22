@@ -50,6 +50,7 @@
     align-items: center;
     color: white;
     text-align: center;
+    height: 100vh;
 }
 
 .section-header {

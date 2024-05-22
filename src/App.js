@@ -17,7 +17,6 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
-
         </Routes>
       </BrowserRouter>
     </>
