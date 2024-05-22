@@ -7,11 +7,14 @@ import Bubbles from './Bubbles';
 import etchImg from '../images/etch-a-sketch.png';
 import toDoImg from '../images/to-do-list.jpeg';
 import bookLibraryImg from '../images/book-library.png';
+import { NavigationMobile } from './NavigationMobile';
+import { useMediaQuery } from 'react-responsive';
 
 export default function MainContent() {
+      const isMobile = useMediaQuery({ maxWidth: 768 })
     return (
         <div className='main-content'>
-          <Navigation />
+          {isMobile ? <NavigationMobile /> : <Navigation />}
           <Bubbles />
           <About />
           <Bubbles />

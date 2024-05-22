@@ -118,6 +118,43 @@
     color: #E9D985;
 }
 
+.mobile-navigation-button {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+.mobile-menu {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    list-style-type: none;
+    padding: 20px; 
+
+}
+
+.mobile-menu li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+}
+
+.mobile-menu img {
+    margin-right: 10px;
+}
+
+.mobile-menu li:hover {
+    cursor: pointer;
+    color: #E9D985;
+}
+
+
 .project-section {
     align-items: center;
     color: white;
