@@ -11,7 +11,7 @@ import etchImg from '../images/etch-a-sketch.png'
 import toDoImg from '../images/to-do-list.jpeg'
 import bookLibraryImg from '../images/book-library.png'
 import Bubbles from '../components/Bubbles'
-
+import ResponsiveCarousel from '../components/Carousel';
 
 export default function App() {
 
@@ -23,7 +23,7 @@ export default function App() {
         <Bubbles />
         <About />
         <Bubbles />
-        <Skills />
+        <ResponsiveCarousel />
         <Bubbles />
         <div className="project-section">Projects</div>
         <div className="project-container">

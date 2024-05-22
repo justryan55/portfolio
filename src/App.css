@@ -34,6 +34,8 @@
     display: block;
     height: 50px;
     position: absolute;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0.5s ease, bottom 0.5s ease;
 }
 
 @keyframes bouncing {
@@ -68,6 +70,15 @@
     height: auto;
     max-width: 100%;
     border-radius: 50%;
+}
+
+.crsl {
+    width: 50%;
+    margin: auto;
+}
+
+.crsl img {
+    height: 100px;
 }
 
 .navigation {
@@ -105,87 +116,56 @@
     color: #E9D985;
 }
 
-.skills-container {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    padding: 60px 0;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
-
-}
-
-.skills-slide {
-    display: flex;
-    animation: 20s slide infinite linear;
-}
-
-.skills-slide img {
-    height: 100px;
-    margin: 0 40px;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0)
-    }
-    to {
-        transform: translateX(-50%)
-    }
-} 
-
 .project-section {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     color: white;
     text-align: center;
-}
-
-.project {
-    display: flex;
-    grid-template-rows: 100px;
-
-}
-
-.project-section {
     padding: 100px;
     padding-bottom: 75px;
     font-size: 2em;
 }
 
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
 }
 
 .project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 calc(33.33% - 20px); 
+    display: grid;
+    grid-template-rows: 1fr, 0.5fr;
+    background-color: rgb(34, 46, 80, 50%);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.5s ease;
     margin-bottom: 20px;
     color: white;
-    height: 100vh;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
 
 .project-image {
-    width: 300px;
-    border-radius: 10%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
 }
 
 .project-image:hover {
-    width: 350px;
+    transform: scale(1.1);
     cursor: pointer;
-    border-radius: 10%;
 }
 
 .project-title {
     font-size: 1.25rem;
     font-weight: 600;
+    margin-top: 15px;
 }
 
 .project-demo-link {
@@ -196,6 +176,7 @@
 .project-github-link {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .project-demo-link:hover, 
@@ -205,11 +186,14 @@
 
 
 .project-description {
-    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
 }
 
 .project-links {
-    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .contact-section {
