@@ -22,7 +22,7 @@ export default function MainContent() {
           <About />
           <Bubbles />
           <Bubbles />
-          <div id='projects' className="project-section">Projects</div>
+          <div className="project-section">Projects</div>
           <div className="project-container">
             <Project 
               imgSrc={etchImg}
@@ -44,7 +44,7 @@ export default function MainContent() {
             />
           </div>
           {/* <Bubbles /> */}
-          <div id='contact' className='contact-section'>
+          <div className='contact-section'>
             <Contact />
           </div>
           <div>

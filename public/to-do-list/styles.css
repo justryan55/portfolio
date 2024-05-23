@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
     background: linear-gradient(to right,#007991, #222E50);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
 }
 
@@ -211,10 +213,10 @@ li {
 
 .navigation {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     color: white;
+    position: sticky;
     top: 0;
     height: 33px;
 }
@@ -230,21 +232,27 @@ li {
     color: #E9D985;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
 .menu {
     display: flex;
     list-style-type: none;
 }
 
-.menu li {
+.nav-menu {
     margin-right: 30px;
+    font-size: 16px;
+    padding: 0;
+    margin-top: 5px;
 }
 
-.menu li:hover {
+.nav-menu:hover {
     cursor: pointer;
     color: #E9D985;
 }
-
 
 .footer {
     display: flex;
@@ -272,3 +280,4 @@ li {
         transform: rotate(360deg);
     }
 }
+
