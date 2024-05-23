@@ -133,7 +133,7 @@
     right: 0;
     list-style-type: none;
     padding: 20px; 
-
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .mobile-menu li {
@@ -141,7 +141,6 @@
     justify-content: center;
     margin-bottom: 5px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8); 
     color: white;
 }
 
@@ -406,10 +405,99 @@ form {
     textarea {
         width: 100%;   
     }
- 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .profile-image {
+        width: 25em;
+        margin-top: 25px;
+    }
+
+    .about {
+        min-height: 85vh;
+    }
+
+    .section-text {
+        width: 95%;
+        font-size: 1.25em;
+        margin-top: 25px;
+        padding-bottom: 0px;
+    }
     
+    .project-section {
+        margin-bottom: 25px;
+    }
+
+    .project-container {
+        max-width: 75%;
+        padding-bottom: 200px;
+    }
+
+    .project-card {
+        padding-bottom: 125px;
+    }
     
+    .crsl {
+        width: 70%;
+        margin-top: 80px;
+    }
     
+    .crsl img {
+        height: 100px;
+    }
+   
+    .header{
+        font-size: 2.5em;
+    }
+
+    .second-header {
+        font-size: 1em;
+    }
     
+    .contact-section {
+        min-height: 40vh;
+    }
     
+    .contact-form {
+        padding: 30px;
+        width: 80%;
+    }
+    
+    .contact-text {
+        font-size: 0.5em;
+        padding-top: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    
+    textarea {
+        width: 100%;   
+    }
+
+    .footer {
+        padding-bottom: 80px;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .section-header {
+        padding-bottom: 30px;
+    }
+
+    .section-text {
+        font-size: 1.5em;
+        padding-top: 50px;
+    }
+
+    .crsl {
+        padding-top: 100px;
+    }
+
+    .project-section {
+        padding-bottom: 100px;
+    }
 }
