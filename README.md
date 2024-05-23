@@ -3,8 +3,10 @@
 This is my personal portfolio website showcasing my projects and skills.
 
 ## Table of Contents
-- Introduction
-- Features
+
+- [Introduction](#introduction)
+- [Features](#features)
+
 
 ## Introduction
 
