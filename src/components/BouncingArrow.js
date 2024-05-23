@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import arrowImg from '../images/arrow-down.svg'
+import React, { useState, useEffect } from 'react';
+import arrowImg from '../images/arrow-down.svg';
 
 const BouncingArrow = () => {
     const [opacity, setOpacity] = useState(1);

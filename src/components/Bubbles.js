@@ -1,5 +1,5 @@
-import React from 'react'
-import './Bubbles.css'
+import React from 'react';
+import './Bubbles.css';
 
 export default function Bubbles() {
     return (

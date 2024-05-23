@@ -1,5 +1,5 @@
 import React from 'react';
-import BouncingArrow from './BouncingArrow'
+import BouncingArrow from './BouncingArrow';
 
 export default function Header(){
 

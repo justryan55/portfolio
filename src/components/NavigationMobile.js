@@ -1,20 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { useClickAway } from "react-use";
 import { useRef } from "react";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
-import home from '../images/home.svg'
-import about from '../images/user.svg'
-import projects from '../images/hard-drive.svg'
-import contact from '../images/mail.svg'
+import home from '../images/home.svg';
+import about from '../images/user.svg';
+import projects from '../images/hard-drive.svg';
+import contact from '../images/mail.svg';
 
 export const NavigationMobile = () => {
     const [isOpen, setIsOpen] = useState(false)
     const ref = useRef(null)
 
     useClickAway(ref, () => setIsOpen(false))
-
 
     return (
         <div ref={ref} className='mobile-navigation-button'>
