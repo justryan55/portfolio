@@ -3,7 +3,6 @@ import { useClickAway } from "react-use";
 import { useRef } from "react";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import { ScrollLink } from 'react-scroll'; 
 import { AnimatePresence, motion } from "framer-motion";
 import home from '../images/home.svg'
 import about from '../images/user.svg'
@@ -29,10 +28,10 @@ export const NavigationMobile = () => {
                         transition={{ duration: 0.2 }}
                     >
                      <ul className="mobile-menu">
-                        <li><img src={home} />Home</li>
-                        <li><img src={about} />About</li>
-                        <li><img src={projects} />Projects</li>
-                        <li><img src={contact} />Contact</li>
+                        <li><img src={home} alt='home'/>Home</li>
+                        <li><img src={about} alt='about'/>About</li>
+                        <li><img src={projects} alt='projects'/>Projects</li>
+                        <li><img src={contact} alt='contact'/>Contact</li>
                     </ul>
 
                         <motion.li
