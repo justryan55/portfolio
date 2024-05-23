@@ -124,8 +124,7 @@ input[type="color"]:hover {
     font-weight: bold;
 }
 
-.logo:hover {
-    padding-left: 20px;
+.logo a:hover {
     cursor: pointer;
     color: #E9D985;
 }
@@ -145,7 +144,7 @@ a {
     margin-right: 30px;
 }
 
-.menu li:hover {
+.menu li:hover a{
     cursor: pointer;
     color: #E9D985;
 }

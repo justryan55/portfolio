@@ -226,8 +226,7 @@ li {
     font-weight: bold;
 }
 
-.logo:hover {
-    padding-left: 20px;
+.logo a:hover {
     cursor: pointer;
     color: #E9D985;
 }
@@ -249,7 +248,7 @@ a {
     margin-top: 5px;
 }
 
-.nav-menu:hover {
+.nav-menu:hover a {
     cursor: pointer;
     color: #E9D985;
 }

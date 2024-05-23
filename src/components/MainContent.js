@@ -21,7 +21,6 @@ export default function MainContent() {
           <Bubbles />
           <About />
           <Bubbles />
-          <Bubbles />
           <div id='projects' className="project-section">Projects</div>
           <div className="project-container">
             <Project 
