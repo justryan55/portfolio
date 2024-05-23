@@ -381,10 +381,11 @@ form {
     }
 
     .project-card {
-        padding-bottom: 85px;
+        padding-bottom: 25px;
     }
 
     .contact-section {
+        padding-top: 20px;
         min-height: 60vh;
     }
     
