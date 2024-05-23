@@ -10,7 +10,7 @@ export default function Contact(){
 
         emailjs
         .sendForm('service_mp96p5t', 'template_8gg2uao', form.current, {
-          publicKey: process.env.NEXT_PUBLIC_REACT_APP_EMAILJS_PUBLIC_KEY,
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
         })
         .then(
           () => {
