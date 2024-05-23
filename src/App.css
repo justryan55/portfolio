@@ -169,8 +169,9 @@
     justify-items: center;
     width: 80%;
     margin: 0 auto;
+    min-height: 125vh;
     height: auto;
-    min-height: 100vh;
+
 }
 
 .project-card {
@@ -193,7 +194,7 @@
 
 .project-image {
     width: 90%;
-    height: auto;
+    height: 95%;
     border-radius: 10px;
     transition: transform 0.5s ease;
 }
@@ -239,6 +240,7 @@
 
 .contact-section {
     min-height: 70vh;
+    margin-top: 120px;
 }
 
 .contact-form {
@@ -256,6 +258,7 @@
     margin: 0 auto;
     font-size: 0.5em;
     padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 input {
@@ -480,6 +483,18 @@ form {
     .footer {
         padding-bottom: 80px;
     }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px){
+    .project-section {
+        margin-top: 150px;
+    }
+
+    .contact-form {
+        padding: 30px;
+        width: 60%;
+    }
+
 }
 
 @media screen and (min-width: 2000px){

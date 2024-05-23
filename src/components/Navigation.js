@@ -46,7 +46,7 @@ export default function Navigation(){
                         duration={500}
                         spy={true}
                         hashSpy={true}
-                        offset={-200}
+                        offset={-100}
                     >
                         Contact
                     </ScrollLink>
