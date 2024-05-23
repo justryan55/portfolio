@@ -302,6 +302,10 @@ form {
     background-color: #e6cc4a;
 }
 
+.sent-message {
+    font-size: 20px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
