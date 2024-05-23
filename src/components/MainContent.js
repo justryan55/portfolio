@@ -41,7 +41,7 @@ export default function MainContent() {
             />
             <Project 
               imgSrc={portfolioImg}
-              title="This Portfolio"
+              title="My Portfolio"
               description="A React-built portfolio that highlights my journey and showcases my projects."
               githubLink="https://github.com/justryan55/portfolio"
             />
