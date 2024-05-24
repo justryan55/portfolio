@@ -414,7 +414,7 @@ form {
 
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 710px) {
     .project-section{
         margin-top: 300px;
     }
