@@ -8,6 +8,8 @@ export default function Project({
     demoLink,
     githubLink
 }){
+
+    const hideDemoLink = title === "Online Store" || title === "Umbrella Talk"
     return (
         <div className="project-card">
             <a href={demoLink} title={title}>
@@ -20,7 +22,7 @@ export default function Project({
             <h1 className="project-title">{title}</h1>
             <p className="project-description">{description}</p>
             <div className="project-links">
-                <a href={demoLink} className="project-demo-link">Demo</a>
+                {!hideDemoLink && <a href={demoLink} className="project-demo-link">Demo</a>}
                 <a href={githubLink} className="project-github-link" target='_blank' rel='noreferrer'>Repo</a>
             </div>
         </div>
