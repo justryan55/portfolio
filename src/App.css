@@ -4,7 +4,6 @@
     background: linear-gradient(to right,#007991, #222E50);
     font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
-
 }
 
 .header{
@@ -412,6 +411,13 @@ form {
     textarea {
         width: 100%;   
     }
+
+}
+
+@media screen and (max-height: 700px) {
+    .project-section{
+        margin-top: 300px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -499,8 +505,9 @@ form {
         padding: 30px;
         width: 60%;
     }
-
+    
 }
+
 
 @media screen and (min-width: 2000px){
     .section-header {
