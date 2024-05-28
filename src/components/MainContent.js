@@ -36,6 +36,8 @@ export default function MainContent() {
               imgSrc={storeImg}
               title="Online Store"
               description="Online Clothes Store - Under Development."
+              demoLink="https://thereactfakestore.netlify.app/" 
+              target="_blank"
               githubLink="https://github.com/justryan55/shopping-cart"
             
             />
