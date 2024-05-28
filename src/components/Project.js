@@ -13,7 +13,7 @@ export default function Project({
     const hideDemoLink = title === "Umbrella Talk"
     return (
         <div className="project-card">
-            <a href={demoLink} title={title}>
+            <a href={demoLink} target={target} title={title}>
                 <img 
                     src={imgSrc}
                     alt={imgAlt}
