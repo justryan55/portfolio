@@ -38,9 +38,10 @@ export default function MainContent() {
           <Project 
               imgSrc={messagingImg}
               title="Umbrella Talk"
-              description="Full Stack Messaging Service - Under Development."
+              description="Full Stack Messaging Service developed with the MERN stack, allowing users to edit and delete messages, clear conversation history, update profile pictures, and delete their accounts."
+              demoLink="https://umbrella-talk-api-zeta.vercel.app/" 
+              target="_blank"
               githubLink="https://github.com/justryan55/umbrella-talk"
-            
             />
             <Project 
               imgSrc={storeImg}
