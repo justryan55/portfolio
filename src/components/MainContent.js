@@ -10,6 +10,7 @@ import storeImg from '../images/store.png'
 import portfolioImg from '../images/portfolio.png'
 import messagingImg from '../images/messaging-app.png'
 import bookLibraryImg from '../images/book-library.png';
+import activeHorizonsImg from '../images/active-horizons.png'
 import { NavigationMobile } from './NavigationMobile';
 import { useMediaQuery } from 'react-responsive';
 import { Outlet } from 'react-router-dom';
@@ -26,6 +27,15 @@ export default function MainContent() {
           <div id='projects' className="project-section">Projects</div>
           <div className="project-container">
           <Project 
+              imgSrc={activeHorizonsImg}
+              title="Active Horizons Health Group"
+              description="A responsive business page for a physiotherapy telehealth provider."
+              demoLink="https://activehorizons.com.au" 
+              target="_blank"
+              githubLink="https://github.com/justryan55/active-horizons"
+            
+            />
+          <Project 
               imgSrc={messagingImg}
               title="Umbrella Talk"
               description="Full Stack Messaging Service - Under Development."
@@ -35,7 +45,7 @@ export default function MainContent() {
             <Project 
               imgSrc={storeImg}
               title="Online Store"
-              description="Online Clothes Store - Under Development."
+              description="Online Clothes Store to demonstrate use of state. Not responsive."
               demoLink="https://ritzythreads.netlify.app/" 
               target="_blank"
               githubLink="https://github.com/justryan55/shopping-cart"
@@ -65,7 +75,7 @@ export default function MainContent() {
             <Project 
               imgSrc={toDoImg}
               title="To Do List"
-              description="Stay organized and productive with a JavaScript-powered to-do list web app."
+              description="Stay organised and productive with a JavaScript-powered to-do list web app."
               demoLink="/to-do-list"
               githubLink="https://github.com/justryan55/to-do-list"
             />
