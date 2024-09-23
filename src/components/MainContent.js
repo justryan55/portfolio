@@ -30,9 +30,9 @@ export default function MainContent() {
       <div className="project-container">
         <Project
           imgSrc={globeTrotterImg}
-          title="Globe Trotter"
+          title="GlobeTrotter"
           description="Full Stack Social Media Site developed with the MERN stack, allowing users to create posts, like and comment on posts, explore google maps, identify the number of countries they have visited and follow other users."
-          // demoLink="https://umbrella-talk-api-zeta.vercel.app/"
+          demoLink="https://travel-project-eight-phi.vercel.app/"
           target="_blank"
           githubLink="https://github.com/justryan55/travel-project"
         />
