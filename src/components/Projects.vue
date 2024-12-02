@@ -27,8 +27,8 @@ export default defineComponent({
           title: 'Prompter',
           img: 'Prompter001.png',
           desc: 'An application that encourages users to send daily messages to their family and friends by providing a new prompt each day.',
-          demo: '',
-          github: '',
+          demo: 'https://prompter-git-deployment-ryans-projects-20a8834f.vercel.app/',
+          github: 'https://github.com/justryan55/prompter-app',
         },
         {
           id: 4,
