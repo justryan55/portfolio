@@ -18,7 +18,7 @@ export default defineComponent({
 
 <template>
   <nav class="container">
-    <p class="header">Ryan Irani</p>
+    <p class="header" @click="handleClick('/')">Ryan Irani</p>
     <div>
       <p :class="isCurrentRoute('/') ? 'active' : 'item'" @click="handleClick('/')">Home</p>
       <p :class="isCurrentRoute('/about') ? 'active' : 'item'" @click="handleClick('/about')">
