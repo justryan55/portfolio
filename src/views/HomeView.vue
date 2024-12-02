@@ -3,6 +3,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'HomeView',
+  methods: {
+    handleClick(page: string) {
+      this.$router.push(page)
+    },
+  },
 })
 </script>
 
@@ -17,8 +22,8 @@ export default defineComponent({
         </p>
       </div>
       <div class="btn-container">
-        <p class="btn">Latest Works</p>
-        <p class="btn">Contact Me</p>
+        <p class="btn" @click="handleClick('/projects')">Latest Works</p>
+        <p class="btn" @click="handleClick('/contact')">Contact Me</p>
       </div>
     </div>
     <div class="image-container">
