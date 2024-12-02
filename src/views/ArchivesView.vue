@@ -221,16 +221,6 @@ a {
 } */
 
 @media (max-width: 768px) {
-  .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    padding: 100px 0;
-    margin: 0;
-  }
-
   .main-header {
     display: block;
 
@@ -244,19 +234,26 @@ a {
     width: 100vw;
     text-align: center;
   }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 100px 0;
+    margin: 0;
+  }
 
   .header {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     font-weight: 600;
   }
 
   .text {
-    display: flex;
-    align-items: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 0;
   }
 
@@ -279,11 +276,12 @@ a {
 
   .btn-container {
     justify-content: space-around;
-    padding-top: 10px;
+    padding-top: 0px;
   }
 
   .btn {
-    padding: 15px;
+    padding: 10px;
+    margin-top: 10px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;

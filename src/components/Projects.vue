@@ -218,13 +218,13 @@ a {
   .header {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     font-weight: 600;
   }
 
   .text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 0;
   }
 
@@ -247,11 +247,12 @@ a {
 
   .btn-container {
     justify-content: space-around;
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .btn {
-    padding: 15px;
+    padding: 10px;
+    margin-top: 10px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;

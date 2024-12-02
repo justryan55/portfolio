@@ -107,6 +107,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header {
@@ -243,15 +244,18 @@ svg .draw {
   }
 
   .header {
-    letter-spacing: 0px;
+    /* letter-spacing: 0px; */
+    /* padding: 0px 15px; */
+    background-color: #181818;
+    z-index: 1000;
   }
 
   .contact-header {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .contact-form {
-    position: absolute;
+    position: fixed;
     color: white;
     text-align: center;
     padding: 50px;
@@ -264,7 +268,7 @@ svg .draw {
   }
 
   .svg-container {
-    top: 20px;
+    top: 50px;
     justify-content: flex-start;
     align-items: flex-start;
     width: 50vw;
