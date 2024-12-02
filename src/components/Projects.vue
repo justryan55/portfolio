@@ -208,10 +208,23 @@ a {
   .section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    padding: 0;
+    padding: 100px 0;
+    margin: 0;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .text {
+    font-size: 1.25rem;
     margin: 0;
   }
 
@@ -238,14 +251,11 @@ a {
   }
 
   .btn {
-    font-size: 1.5rem;
+    padding: 15px;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
     width: 100%;
-  }
-
-  .text {
-    margin: 0;
   }
 }
 </style>

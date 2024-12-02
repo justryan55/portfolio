@@ -151,6 +151,18 @@ html {
     text-align: center;
   }
 
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 3rem;
+    padding: 15px;
+    color: white;
+    opacity: 0;
+    animation: fadeInText 1.2s ease-in-out forwards 0.5s;
+  }
+
   .btn-container {
     flex-direction: column;
     padding: 0px 50px;

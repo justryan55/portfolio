@@ -22,8 +22,8 @@ export default defineComponent({
       <div title="Home">
         <svg
           @click="handleClick('/')"
-          width="50px"
-          height="50px"
+          width="24px"
+          height="24px"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -73,8 +73,8 @@ export default defineComponent({
       <div title="About">
         <svg
           @click="handleClick('/about')"
-          width="50px"
-          height="50px"
+          width="24px"
+          height="24px"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +97,8 @@ export default defineComponent({
       <div title="Projects">
         <svg
           @click="handleClick('/projects')"
-          width="50px"
-          height="50px"
+          width="24px"
+          height="24px"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -124,8 +124,8 @@ export default defineComponent({
       <div title="Contact">
         <svg
           @click="handleClick('/contact')"
-          width="50px"
-          height="50px"
+          width="24px"
+          height="24px"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -166,13 +166,13 @@ export default defineComponent({
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 15px 30px;
+  padding: 15px 24px;
   width: 100%;
   color: #42b883;
   background-color: #2a2a2a;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   background: linear-gradient(145deg, #333333, #2a2a2a);
   z-index: 1000;
 }

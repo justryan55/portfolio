@@ -242,6 +242,14 @@ svg .draw {
     margin-top: 100px;
   }
 
+  .header {
+    letter-spacing: 0px;
+  }
+
+  .contact-header {
+    margin-top: 20px;
+  }
+
   .contact-form {
     position: absolute;
     color: white;
@@ -251,15 +259,15 @@ svg .draw {
     background-color: transparent;
   }
 
-  textarea {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    resize: none;
-    margin-top: 12px;
+  input {
+    width: 90vw;
+  }
+
+  .svg-container {
+    top: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50vw;
   }
 }
 </style>

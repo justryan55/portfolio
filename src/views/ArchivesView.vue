@@ -79,6 +79,7 @@ export default defineComponent({
 
 <template>
   <div class="container">
+    <div class="main-header">Archives</div>
     <div v-for="item in items" :key="item.id">
       <section class="section">
         <div class="image-container">
@@ -177,6 +178,10 @@ a {
   transform: translateY(-2px);
 }
 
+.main-header {
+  display: none;
+}
+
 .header {
   font-size: 4rem;
   color: white;
@@ -219,10 +224,39 @@ a {
   .section {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    padding: 0;
+    padding: 100px 0;
+    margin: 0;
+  }
+
+  .main-header {
+    display: block;
+
+    position: relative;
+    top: 100px;
+    padding-bottom: 20px;
+    background-color: #181818;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 2.5rem;
+    width: 100vw;
+    text-align: center;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
     margin: 0;
   }
 
@@ -245,18 +279,15 @@ a {
 
   .btn-container {
     justify-content: space-around;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   .btn {
-    font-size: 1.5rem;
+    padding: 15px;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
     width: 100%;
-  }
-
-  .text {
-    margin: 0;
   }
 }
 </style>

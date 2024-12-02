@@ -137,6 +137,15 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     margin: 0;
+
+    font-size: 1.25rem;
+    margin: 0;
+    animation: showText 0.5s ease-in-out;
+  }
+
+  .column {
+    flex: auto;
+    padding: 0px 30px;
   }
 
   .text .column:first-child {
