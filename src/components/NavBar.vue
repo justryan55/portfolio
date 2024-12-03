@@ -18,19 +18,22 @@ export default defineComponent({
 
 <template>
   <nav class="container">
-    <p class="header" @click="handleClick('/')">Ryan Irani</p>
-    <div>
-      <p :class="isCurrentRoute('/') ? 'active' : 'item'" @click="handleClick('/')">Home</p>
-      <p :class="isCurrentRoute('/about') ? 'active' : 'item'" @click="handleClick('/about')">
+    <a class="header" @click="handleClick('/')">Ryan Irani</a>
+    <ul>
+      <li :class="isCurrentRoute('/') ? 'active' : 'item'" @click="handleClick('/')">Home</li>
+      <li :class="isCurrentRoute('/about') ? 'active' : 'item'" @click="handleClick('/about')">
         About
-      </p>
-      <p :class="isCurrentRoute('/projects') ? 'active' : 'item'" @click="handleClick('/projects')">
+      </li>
+      <li
+        :class="isCurrentRoute('/projects') ? 'active' : 'item'"
+        @click="handleClick('/projects')"
+      >
         Projects
-      </p>
-      <p :class="isCurrentRoute('/contact') ? 'active' : 'item'" @click="handleClick('/contact')">
+      </li>
+      <li :class="isCurrentRoute('/contact') ? 'active' : 'item'" @click="handleClick('/contact')">
         Contact
-      </p>
-    </div>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -66,9 +69,13 @@ export default defineComponent({
   transform: scale(1.1);
 }
 
-.container > div {
+.container > ul {
   display: flex;
   gap: 40px;
+}
+
+.container > ul > li {
+  list-style: none;
 }
 
 .item {

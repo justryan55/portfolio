@@ -50,7 +50,7 @@ export default defineComponent({
 
 <template>
   <main class="container">
-    <div class="header">Let's Work Together</div>
+    <h1 class="header">Let's Work Together</h1>
     <div class="svg-container">
       <svg
         fill="none"
@@ -77,25 +77,47 @@ export default defineComponent({
         />
       </svg>
     </div>
-    <div className="contact-form hidden" id="contact-form">
-      <div className="contact-header">Contact</div>
-      <p className="contact-text">
+    <div class="contact-form hidden" id="contact-form">
+      <h2 class="contact-header">Contact</h2>
+      <p class="contact-text">
         Have a question or want to work together? Leave your details and I'll get back to you as
         soon as possible.
       </p>
       <form ref="form" @submit="handleSubmit">
         <label htmlFor="name">
-          <input type="text" name="name" id="name" placeholder="Name" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+            pattern="[A-Za-z ]+"
+            title="Only letters and spaces are allowed."
+          />
         </label>
         <label htmlFor="email">
-          <input type="email" name="email" id="email" className="input-email" placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="input-email"
+            placeholder="Email"
+            required
+          />
         </label>
         <label htmlFor="message">
-          <textarea id="message" name="message" className="input-message" placeholder="Message" />
+          <textarea
+            id="message"
+            name="message"
+            class="input-message"
+            placeholder="Message"
+            required
+            minlength="10"
+          />
         </label>
-        <button type="submit" className="btn">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </form>
-      <p v-if="sent" className="sent-message">Message has been sent</p>
+      <p v-if="sent" class="sent-message">Message has been sent</p>
     </div>
   </main>
 </template>
@@ -129,6 +151,10 @@ export default defineComponent({
   background-color: rgb(0, 0, 0, 30%);
   border-radius: 20px;
   margin-top: 50px;
+}
+
+.contact-header {
+  font-size: 1.75rem;
 }
 
 .contact-text {

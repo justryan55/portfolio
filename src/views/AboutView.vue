@@ -18,6 +18,7 @@ export default defineComponent({
         { id: 4, imageUrl: 'nodejs-original-wordmark.svg' },
         { id: 5, imageUrl: 'react-original.svg' },
         { id: 6, imageUrl: 'vue.svg' },
+        { id: 7, imageUrl: 'typescript-original.svg' },
       ],
       breakpoints: {
         640: {
@@ -25,7 +26,7 @@ export default defineComponent({
           itemsToScroll: 1,
         },
         1024: {
-          itemsToShow: 2,
+          itemsToShow: 3,
           itemsToScroll: 1,
         },
         1440: {
@@ -41,24 +42,24 @@ export default defineComponent({
 <template>
   <main class="main">
     <div class="container">
-      <p class="header">About</p>
+      <h1 class="header">About</h1>
       <div class="content">
         <div class="text">
-          <div class="column">
+          <p class="column">
             Hi, I’m Ryan! I’m a self-taught full-stack web developer driven by a passion for
             creating and building things. I hold a Master’s degree in Physiotherapy Practice from
             Australia and have worked as a physiotherapist for over five years. However, my
             curiosity and drive to explore new challenges led me to pursue a career in coding.
-          </div>
+          </p>
 
-          <div class="column">
+          <p class="column">
             Over the past 12 months, I’ve dedicated myself to learning web development, with the
             guidance of a mentor who has shared his expertise with me over the last eight months. To
             gain hands-on experience, I also completed a 10-week internship at Lynx Digital, where I
             honed my skills in real-world projects. When I’m not coding or working as a
             physiotherapist, I enjoy spending my time traveling, with family and friends, at the gym
             or running.
-          </div>
+          </p>
         </div>
         <carousel
           :autoplay="1500"
@@ -104,7 +105,7 @@ export default defineComponent({
   text-align: center;
   color: white;
   align-items: stretch;
-  text-align: justify;
+  text-align: left;
   font-size: 1.5rem;
   margin: 0px 100px;
   animation: showText 0.5s ease-in-out;
@@ -130,6 +131,27 @@ export default defineComponent({
 
 .carousel {
   margin: 50px;
+}
+
+@media (max-width: 1000px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    font-size: 1.25rem;
+    margin: 0;
+    animation: showText 0.5s ease-in-out;
+  }
+
+  .column {
+    flex: auto;
+    padding: 0px 30px;
+  }
+
+  .text .column:first-child {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 768px) {

@@ -13,17 +13,19 @@ export default defineComponent({
 
 <template>
   <main class="main">
+    <div></div>
+
     <div>
       <div class="container">
-        <p class="header">Ryan Irani</p>
+        <h1 class="header">Ryan Irani</h1>
         <p class="text">
           Full Stack <br />
           Web Developer
         </p>
       </div>
       <div class="btn-container">
-        <p class="btn" @click="handleClick('/projects')">Latest Works</p>
-        <p class="btn" @click="handleClick('/contact')">Contact Me</p>
+        <a class="btn" @click="handleClick('/projects')">Latest Works</a>
+        <a class="btn" @click="handleClick('/contact')">Contact Me</a>
       </div>
     </div>
     <div class="image-container">
@@ -40,11 +42,10 @@ html {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.4fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-left: 25rem;
 }
 
 .container {
@@ -67,7 +68,7 @@ html {
 }
 
 .btn-container {
-  display: flex;
+  margin-top: 20px;
   gap: 10px;
   animation:
     fadeInBtn 2s ease-in,

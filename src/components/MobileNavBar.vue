@@ -18,8 +18,8 @@ export default defineComponent({
 
 <template>
   <nav class="container">
-    <div class="nav-icons">
-      <div title="Home">
+    <ul class="nav-icons">
+      <li title="Home">
         <svg
           @click="handleClick('/')"
           width="24px"
@@ -69,8 +69,8 @@ export default defineComponent({
             stroke-width="1.5"
           />
         </svg>
-      </div>
-      <div title="About">
+      </li>
+      <li title="About">
         <svg
           @click="handleClick('/about')"
           width="24px"
@@ -93,8 +93,8 @@ export default defineComponent({
             stroke-width="1.5"
           />
         </svg>
-      </div>
-      <div title="Projects">
+      </li>
+      <li title="Projects">
         <svg
           @click="handleClick('/projects')"
           width="24px"
@@ -120,8 +120,8 @@ export default defineComponent({
             stroke-width="1.5"
           />
         </svg>
-      </div>
-      <div title="Contact">
+      </li>
+      <li title="Contact">
         <svg
           @click="handleClick('/contact')"
           width="24px"
@@ -154,8 +154,8 @@ export default defineComponent({
             stroke-linecap="round"
           />
         </svg>
-      </div>
-    </div>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -177,9 +177,13 @@ export default defineComponent({
   z-index: 1000;
 }
 
-.container > div {
+.container > ul {
   display: flex;
   justify-content: space-around;
+}
+
+.container > ul > li {
+  list-style: none;
 }
 
 .nav-icons {

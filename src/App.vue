@@ -26,7 +26,6 @@ export default defineComponent({
   methods: {
     handleWindowSizeChange() {
       this.windowWidth = window.innerWidth
-      console.log(this.isMobile)
     },
   },
 })

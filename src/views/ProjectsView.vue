@@ -4,7 +4,7 @@ import Projects from '@/components/Projects.vue'
 
 <template>
   <main class="container">
-    <div class="header">Projects</div>
+    <h1 class="header">Projects</h1>
     <div>
       <Projects />
     </div>
