@@ -170,6 +170,7 @@ html {
   }
 
   .btn-container {
+    display: flex;
     flex-direction: column;
     padding: 0px 50px;
     gap: 20px;
@@ -177,6 +178,7 @@ html {
 
   .btn {
     width: 100%;
+    margin-right: 0;
   }
 
   .image {
