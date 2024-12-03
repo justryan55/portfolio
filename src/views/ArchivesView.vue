@@ -275,10 +275,12 @@ a {
   .section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 0;
     margin: 0;
+    padding-top: 100px;
+    gap: 30px;
   }
 
   .header {
@@ -287,6 +289,7 @@ a {
 
   .text {
     font-size: 1rem;
+    margin: 15px 0px;
   }
 
   .image {
@@ -303,7 +306,7 @@ a {
   }
 
   .information {
-    padding: 0px 50px;
+    padding: 0px 5px;
   }
 
   .btn-container {
