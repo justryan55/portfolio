@@ -46,7 +46,47 @@ export default defineComponent({
           id: 5,
           title: 'The Archives',
           img: 'Folder.svg',
-          desc: 'Explore previous projects, showcasing a range of work from my earlier stages of development. While these projects may not represent my current level of expertise, they serve as important milestones that have contributed to my growth.',
+          desc: 'The below projects showcase a range of work from my earlier stages of development. While these projects may not represent my current level of expertise, they serve as important milestones that have contributed to my growth.',
+        },
+        {
+          id: 6,
+          title: 'RitzyThreads',
+          img: '/store.png',
+          desc: 'A non-responsive clothes store to demonstrate the use of state.',
+          demo: 'https://ritzythreads.netlify.app/',
+          github: 'https://github.com/justryan55/shopping-cart',
+        },
+        {
+          id: 7,
+          title: 'To Do List',
+          img: '/to-do-list.jpeg',
+          desc: 'A non-responsive Javascript-powered to-do list application that allows users to create individual projects with separate to-do items.',
+          demo: '/to-do-list/index.html',
+          github: 'https://github.com/justryan55/to-do-list',
+        },
+        {
+          id: 8,
+          title: 'Book Library',
+          img: '/book-library.png',
+          desc: 'A non-responsive Javascript-powered book library that allows users to explore and manage their book collection.',
+          demo: '/library/index.html',
+          github: 'https://github.com/justryan55/book-library',
+        },
+        {
+          id: 9,
+          title: 'Etch-A-Sketch',
+          img: '/etch-a-sketch.png',
+          desc: 'A non-responsive Javascript-powered sketchpad that features the ability to delete, undo, save and load work.',
+          demo: '/etch-a-sketch/index.html',
+          github: 'https://github.com/justryan55/etch-a-sketch',
+        },
+        {
+          id: 10,
+          title: 'Old Portfolio',
+          img: '/old-portfolio.png',
+          desc: 'A React-built portfolio that is no longer in use.',
+          demo: 'https://ryanirani.netlify.app/',
+          github: 'https://github.com/justryan55/portfolio',
         },
       ],
     }
@@ -94,10 +134,10 @@ export default defineComponent({
             <a class="btn" :href="item.github" target="_blank">Github</a>
           </div>
           <div v-else class="archives-btn-container">
-            <p class="btn" @click="this.$router.push('/projects/archives')">Explore</p>
+            <!-- <p class="btn" @click="this.$router.push('/projects/archives')">Explore</p> -->
           </div>
         </div>
-        <div v-if="item.id !== 5" class="arrow-container">
+        <div v-if="item.id !== 10" class="arrow-container">
           <BouncingArrow />
         </div>
       </section>
