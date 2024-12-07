@@ -267,7 +267,7 @@ a {
   bottom: 80px;
   left: 50%;
 }
-
+/* 
 @media (max-width: 1200px) {
   .header {
     display: flex;
@@ -310,9 +310,9 @@ a {
     text-align: center;
     width: 100%;
   }
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .section {
     display: flex;
     flex-direction: column;
