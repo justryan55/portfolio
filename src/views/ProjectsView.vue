@@ -22,13 +22,6 @@ import Projects from '@/components/Projects.vue'
   text-align: center;
 }
 
-@media (max-width: 2024px) {
-  .header {
-    top: 85px;
-    background-color: #181818;
-  }
-}
-
 @media (max-width: 768px) {
   .header {
     top: 50px;

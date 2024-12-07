@@ -267,7 +267,7 @@ a {
   bottom: 80px;
   left: 50%;
 }
-/* 
+/*
 @media (max-width: 1200px) {
   .header {
     display: flex;
@@ -316,14 +316,15 @@ a {
   .section {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 0px;
     margin: 0;
     gap: 30px;
   }
 
   .header {
+    text-align: center;
     font-size: 1.5rem;
   }
 
@@ -346,16 +347,21 @@ a {
   }
 
   .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0px 5px;
   }
 
   .btn-container {
     justify-content: space-around;
     padding-top: 0px;
+    width: 80vw;
   }
 
   .btn {
-    padding: 10px;
+    /* padding: 10px; */
     margin-top: 0px;
     font-size: 1rem;
     font-weight: 600;
