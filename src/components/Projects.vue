@@ -14,7 +14,12 @@ export default defineComponent({
           id: 1,
           title: 'GlobeTrotter',
           img: 'GlobeTrotter001.png',
-          desc: 'A travel social media platform designed for travellers who want to document and share their journeys.',
+          technologies: 'Node.js, Express, React, JavaScript, CSS',
+          desc: 'A travel social media platform designed for travelers who want to document and share their journeys.',
+          features: [
+            'RESTful API built with Node.js and Express',
+            'An in-built messaging service for users to communicate.',
+          ],
           demo: 'https://travel-project-eight-phi.vercel.app/',
           github: 'https://github.com/justryan55/travel-project',
         },
@@ -22,7 +27,13 @@ export default defineComponent({
           id: 2,
           title: 'UmbrellaTalk',
           img: 'UmbrellaTalk000.png',
+          technologies: 'Node.js, Express, React, MongoDB, JavaScript, CSS',
           desc: 'A messaging platform where users can chat, edit messages, update profiles, and manage their data.',
+          features: [
+            'Integrated MongoDB for efficient data storage and retrieval.',
+            'Developed RESTful APIs for user authentication and message handling.',
+          ],
+
           demo: 'https://umbrella-talk-api-zeta.vercel.app/',
           github: 'https://github.com/justryan55/umbrella-talk',
         },
@@ -30,7 +41,12 @@ export default defineComponent({
           id: 3,
           title: 'Prompter',
           img: 'Prompter000.png',
+          technologies: 'Node.js, Express, Vue.js, JavaScript, CSS',
           desc: 'An application that encourages users to send daily messages to their family and friends by providing a new prompt each day.',
+          features: [
+            'Backend APIs for prompt generation and storage using Node.js and Express.',
+            'Vue.js-powered frontend for an engaging user experience.',
+          ],
           demo: 'https://prompter-git-deployment-ryans-projects-20a8834f.vercel.app/',
           github: 'https://github.com/justryan55/prompter-app',
         },
@@ -128,7 +144,17 @@ export default defineComponent({
         </div>
         <div class="information">
           <h1 class="header">{{ item.title }}</h1>
+          <p v-if="item.technologies" class="text">Techologies: {{ item.technologies }}</p>
+
           <p class="text">{{ item.desc }}</p>
+
+          <div v-if="item.features" class="text features">
+            <p><strong>Features:</strong></p>
+            <ul>
+              <li v-for="(feature, index) in item.features" :key="index">{{ feature }}</li>
+            </ul>
+          </div>
+
           <div v-if="item.id !== 5" class="btn-container">
             <a class="btn" :href="item.demo" target="_blank">Demo</a>
             <a class="btn" :href="item.github" target="_blank">Github</a>
@@ -190,9 +216,9 @@ a {
 }
 
 .information {
-  display: grid;
-  grid-template-rows: 0.5fr 1.5fr 0.5fr;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 
   /* animation: slideIn 1s ease-in-out; */
 }
@@ -242,9 +268,9 @@ a {
 }
 
 .text {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hidden {
@@ -267,6 +293,11 @@ a {
   bottom: 80px;
   left: 50%;
 }
+
+.text ul li {
+  margin-left: 50px;
+}
+
 /*
 @media (max-width: 1200px) {
   .header {
@@ -330,7 +361,11 @@ a {
 
   .text {
     font-size: 1rem;
-    margin: 15px 0px;
+    margin: 5px;
+  }
+
+  .features {
+    display: none;
   }
 
   .image {
@@ -356,7 +391,7 @@ a {
 
   .btn-container {
     justify-content: space-around;
-    padding-top: 0px;
+    padding-top: 5px;
     width: 80vw;
   }
 

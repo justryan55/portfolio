@@ -22,8 +22,16 @@ import Projects from '@/components/Projects.vue'
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .header {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
+    display: none;
+
     top: 50px;
     background-color: #181818;
   }
