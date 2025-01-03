@@ -272,18 +272,17 @@ svg .draw {
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    margin-top: 100px;
   }
 
   .header {
     /* letter-spacing: 0px; */
     /* padding: 0px 15px; */
-    background-color: #181818;
+    /* background-color: #181818; */
     z-index: 1000;
   }
 
   .contact-header {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 
   .contact-form {
