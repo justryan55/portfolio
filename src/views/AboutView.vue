@@ -133,12 +133,16 @@ export default defineComponent({
   margin: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+  .main {
+    background: linear-gradient(135deg, rgba(66, 184, 131, 0.1), rgba(24, 24, 24, 0.3));
+    height: 100vh;
+  }
+
   .text {
     display: flex;
     flex-direction: column;
     margin: 0;
-
     font-size: 1.25rem;
     margin: 0;
     animation: showText 0.5s ease-in-out;

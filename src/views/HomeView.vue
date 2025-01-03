@@ -224,6 +224,7 @@ html {
     padding: 0;
     margin: 0;
     text-align: center;
+    background: linear-gradient(135deg, rgba(66, 184, 131, 0.1), rgba(24, 24, 24, 0.3));
   }
 
   .header {

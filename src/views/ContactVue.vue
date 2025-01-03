@@ -228,7 +228,7 @@ form {
 }
 
 .svg-container {
-  top: 80px;
+  top: 100px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -256,6 +256,12 @@ svg .draw {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    background: linear-gradient(135deg, rgba(66, 184, 131, 0.1), rgba(24, 24, 24, 0.3));
   }
 }
 
