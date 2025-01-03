@@ -36,12 +36,12 @@ export default defineComponent({
           },
         },
         particles: {
-          color: { value: '#ffffff' },
+          color: { value: '#42b883' },
           links: {
-            color: '#ffffff',
+            color: '#42b883',
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.4,
             width: 1,
           },
           move: {
