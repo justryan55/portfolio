@@ -13,7 +13,58 @@ export default defineComponent({
 
 <template>
   <main class="main">
-    <div></div>
+    <vue-particles
+      id="tsparticles"
+      :options="{
+        background: {
+          color: { value: '#181818' },
+        },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onClick: { enable: true, mode: 'push' },
+            onHover: { enable: true, mode: 'grab' },
+          },
+          modes: {
+            push: { quantity: 4 },
+            grab: {
+              distance: 150,
+              links: {
+                opacity: 1,
+              },
+            },
+          },
+        },
+        particles: {
+          color: { value: '#ffffff' },
+          links: {
+            color: '#ffffff',
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+          },
+          move: {
+            direction: 'none',
+            enable: true,
+            outModes: 'bounce',
+            random: false,
+            speed: 2,
+            straight: false,
+          },
+          number: {
+            density: { enable: true },
+            value: 160,
+          },
+          opacity: { value: 0.5 },
+          shape: { type: 'circle' },
+          size: { value: { min: 1, max: 5 } },
+        },
+        detectRetina: true,
+      }"
+    />
+
+    <div class="empty-div"></div>
 
     <div>
       <div class="container">
@@ -104,6 +155,15 @@ html {
   animation: showImage 0.9s ease-in;
 }
 
+.empty-div {
+  display: none;
+}
+
+#tsparticles {
+  z-index: -1000;
+  animation: showParticles 3s ease-in;
+}
+
 @keyframes slideInText {
   0% {
     transform: translateX(-100%);
@@ -114,6 +174,15 @@ html {
 }
 
 @keyframes showImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showParticles {
   0% {
     opacity: 0;
   }
@@ -183,6 +252,14 @@ html {
 
   .image {
     display: none;
+  }
+
+  #tsparticles {
+    display: none;
+  }
+
+  .empty-div {
+    display: block;
   }
 }
 </style>
