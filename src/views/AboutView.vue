@@ -46,10 +46,10 @@ export default defineComponent({
       <div class="content">
         <div class="text">
           <p class="column">
-            Hi, I’m Ryan! I’m a self-taught full-stack web developer driven by a passion for
-            creating and building things. I hold a Master’s degree in Physiotherapy Practice from
-            Australia and have worked as a physiotherapist for over five years. However, my
-            curiosity and drive to explore new challenges led me to pursue a career in coding.
+            Hi, I’m Ryan! I’m a Full-Stack Web Developer driven by a passion for creating and
+            building things. I hold a Master’s degree in Physiotherapy Practice from Australia and
+            have worked as a physiotherapist for over five years. However, my curiosity and drive to
+            explore new challenges led me to pursue a career in coding.
           </p>
 
           <p class="column">
