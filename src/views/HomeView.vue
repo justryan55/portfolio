@@ -118,6 +118,7 @@ html {
   opacity: 0;
   line-height: 100px;
   animation: fadeInText 1.2s ease-in-out forwards 0.5s;
+  white-space: nowrap;
 }
 
 .btn-container {

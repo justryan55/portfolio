@@ -79,6 +79,12 @@ export default defineComponent({
 </template>
 
 <style scoped>
+svg {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .container {
   width: 100vw;
 }
