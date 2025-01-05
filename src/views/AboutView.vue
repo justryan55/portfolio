@@ -19,6 +19,7 @@ export default defineComponent({
         { id: 5, imageUrl: 'react-original.svg' },
         { id: 6, imageUrl: 'vue.svg' },
         { id: 7, imageUrl: 'typescript-original.svg' },
+        { id: 8, imageUrl: 'threejs-original-wordmark.svg' },
       ],
       breakpoints: {
         640: {
