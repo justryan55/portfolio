@@ -69,10 +69,10 @@ export default defineComponent({
     <div>
       <div class="container">
         <h1 class="header">Ryan Irani</h1>
-        <p class="text">
+        <h2 class="text">
           Full Stack <br />
           Web Developer
-        </p>
+        </h2>
       </div>
       <div class="btn-container">
         <a class="btn" @click="handleClick('/projects')">Latest Works</a>
@@ -109,17 +109,19 @@ html {
   color: #42b883;
   opacity: 0;
   animation: fadeInText 1.2s ease-in-out forwards 0.3s;
+  margin-bottom: 30px;
 }
 
 .text {
   font-size: 5.5rem;
   color: white;
   opacity: 0;
+  line-height: 100px;
   animation: fadeInText 1.2s ease-in-out forwards 0.5s;
 }
 
 .btn-container {
-  margin-top: 20px;
+  margin-top: 65px;
   gap: 10px;
   animation:
     fadeInBtn 2s ease-in,

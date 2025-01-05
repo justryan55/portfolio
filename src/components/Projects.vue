@@ -183,6 +183,12 @@ a {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   min-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .section {
@@ -244,7 +250,7 @@ a {
   font-weight: 500;
   margin-right: 20px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1vw;
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -260,7 +266,7 @@ a {
 }
 
 .header {
-  font-size: 3rem;
+  font-size: 3vw;
   color: white;
   /* color: #42b883; */
   font-weight: 600;
@@ -268,7 +274,7 @@ a {
 }
 
 .text {
-  font-size: 1.25rem;
+  font-size: 1.25vw;
   color: white;
   margin-bottom: 15px;
 }

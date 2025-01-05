@@ -50,4 +50,42 @@ export default {
     bottom: 0;
   }
 }
+
+@media (max-height: 760px) {
+  .arrow {
+    height: 4vh;
+    animation: bouncing 1s infinite ease-in-out;
+  }
+
+  @keyframes bouncing {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 10px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+}
+
+@media (max-height: 500px) {
+  .arrow {
+    height: 3vh;
+    animation: bouncing 1s infinite ease-in-out;
+  }
+
+  @keyframes bouncing {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 3px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+}
 </style>
