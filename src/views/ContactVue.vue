@@ -33,8 +33,8 @@ export default defineComponent({
     },
   },
   mounted() {
-    const svg = document.querySelector('.svg-container svg')
-    const contactForm = document.getElementById('contact-form')
+    const svg = document.querySelector('.svg-container svg') as HTMLElement
+    const contactForm = document.getElementById('contact-form') as HTMLElement
 
     if (svg && contactForm) {
       svg.addEventListener('animationend', () => {
