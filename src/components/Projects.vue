@@ -65,6 +65,14 @@ export default defineComponent({
         },
         {
           id: 5,
+          title: 'Airvoir',
+          img: 'airvoir.png',
+          desc: 'Replica of https://www.airvoir.com/',
+          demo: 'https://airvoir.vercel.app/',
+          github: 'https://github.com/justryan55/airvoir-replica',
+        },
+        {
+          id: 6,
           title: 'Active Horizons',
           img: 'ActiveHorizons001.png',
           desc: 'Active Horizons Health Group is business website designed for a physiotherapy telehealth provider.',
