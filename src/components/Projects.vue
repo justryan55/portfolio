@@ -176,12 +176,9 @@ export default defineComponent({
             </ul>
           </div>
 
-          <div v-if="item.id !== 5" class="btn-container">
+          <div class="btn-container">
             <a class="btn" :href="item.demo" target="_blank">Demo</a>
             <a class="btn" :href="item.github" target="_blank">Github</a>
-          </div>
-          <div v-else class="archives-btn-container">
-            <!-- <p class="btn" @click="this.$router.push('/projects/archives')">Explore</p> -->
           </div>
         </div>
         <div v-if="item.id !== 6" class="arrow-container">
