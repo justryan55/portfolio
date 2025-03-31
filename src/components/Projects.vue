@@ -184,7 +184,7 @@ export default defineComponent({
             <!-- <p class="btn" @click="this.$router.push('/projects/archives')">Explore</p> -->
           </div>
         </div>
-        <div v-if="item.id !== 10" class="arrow-container">
+        <div v-if="item.id !== 6" class="arrow-container">
           <BouncingArrow />
         </div>
       </section>
