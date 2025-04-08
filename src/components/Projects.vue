@@ -14,7 +14,7 @@ export default defineComponent({
           id: 1,
           title: 'Tamagotchi',
           img: 'tamagotchi.png',
-          technologies: 'React Three Fiber, three.js, React, JavaScript',
+          technologies: 'Next.js, React Three Fiber, three.js, JavaScript',
           desc: 'A virtual pet simulation game where you can care for your pet by feeding it, cleaning it, playing with it, and making sure it gets enough rest.',
           features: [
             'Experience 3D graphics using React Three Fiber and three.js.',
