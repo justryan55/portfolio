@@ -3,6 +3,18 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'HomeView',
+  data() {
+    return {
+      currentYear: new Date().getFullYear(),
+      startYear: 2024,
+    }
+  },
+  computed: {
+    yearsOfExperience() {
+      const months = (this.currentYear - this.startYear) * 12 + (new Date().getMonth() + 1)
+      return months >= 12 ? `${Math.floor(months / 12)}+` : `${months}m`
+    },
+  },
   methods: {
     handleClick(page: string) {
       this.$router.push(page)
@@ -12,258 +24,330 @@ export default defineComponent({
 </script>
 
 <template>
-  <main class="main">
-    <vue-particles
-      id="tsparticles"
-      :options="{
-        background: {
-          color: { value: '#181818' },
-        },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: { enable: true, mode: 'push' },
-            onHover: { enable: true, mode: 'grab' },
-          },
-          modes: {
-            push: { quantity: 4 },
-            grab: {
-              distance: 150,
-              links: {
-                opacity: 1,
-              },
+  <main class="home-container">
+    <section class="hero-section">
+      <vue-particles
+        id="tsparticles"
+        :options="{
+          background: { color: { value: '#181818' } },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: { enable: true, mode: 'push' },
+              onHover: { enable: true, mode: 'grab' },
+            },
+            modes: {
+              push: { quantity: 4 },
+              grab: { distance: 150, links: { opacity: 1 } },
             },
           },
-        },
-        particles: {
-          color: { value: '#42b883' },
-          links: {
-            color: '#42b883',
-            distance: 150,
-            enable: true,
-            opacity: 0.4,
-            width: 1,
+          particles: {
+            color: { value: '#42b883' },
+            links: {
+              color: '#42b883',
+              distance: 150,
+              enable: true,
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              direction: 'none',
+              enable: true,
+              outModes: 'bounce',
+              random: false,
+              speed: 2,
+              straight: false,
+            },
+            number: { density: { enable: true }, value: 80 },
+            opacity: { value: 0.5 },
+            shape: { type: 'circle' },
+            size: { value: { min: 1, max: 2 } },
           },
-          move: {
-            direction: 'none',
-            enable: true,
-            outModes: 'bounce',
-            random: false,
-            speed: 2,
-            straight: false,
-          },
-          number: {
-            density: { enable: true },
-            value: 160,
-          },
-          opacity: { value: 0.5 },
-          shape: { type: 'circle' },
-          size: { value: { min: 1, max: 2 } },
-        },
-        detectRetina: true,
-      }"
-    />
+          detectRetina: true,
+        }"
+      />
 
-    <div class="empty-div"></div>
+      <div class="hero-gradient" />
 
-    <div>
-      <div class="container">
-        <h1 class="header">Ryan Irani</h1>
-        <h2 class="text">
-          Full Stack <br />
-          Web Developer
-        </h2>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-greeting">
+            <span class="greeting-text">Hello, I'm Ryan Irani</span>
+          </div>
+          <h1 class="hero-title">
+            Freelance developer. I work on <span class="highlight">production websites</span> for
+            clients.
+          </h1>
+          <p class="hero-description">
+            12 months of agency experience delivering Shopify custom builds, Webflow redesigns,
+            WordPress maintenance, and live site improvements. I also develop and launch my own
+            projects on the side.
+          </p>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary" @click="handleClick('/projects')">
+            <span>View My Projects</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <button class="btn btn-secondary" @click="handleClick('/contact')">
+            <span>Get In Touch</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="btn-container">
-        <a class="btn" @click="handleClick('/projects')">Latest Works</a>
-        <a class="btn" @click="handleClick('/contact')">Contact Me</a>
-      </div>
-    </div>
-    <div class="image-container">
-      <img :src="'file.png'" class="image" />
-    </div>
+    </section>
   </main>
 </template>
 
 <style scoped>
-body,
-html {
+.home-container {
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 8rem 2rem 4rem;
   overflow: hidden;
 }
 
-.main {
-  display: grid;
-  grid-template-columns: 0.4fr 1fr 1fr;
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(66, 184, 131, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #42b883 0%, #3aa86f 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  box-shadow: 0 12px 40px rgba(66, 184, 131, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+.avatar-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(66, 184, 131, 0.1);
+  border: 1px solid rgba(66, 184, 131, 0.3);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #42b883;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  gap: 1.25rem;
 }
 
-.container {
-  animation: slideInText 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+.hero-greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
 }
 
-.header {
-  font-size: 2rem;
-  letter-spacing: 10px;
-  color: #42b883;
-  opacity: 0;
-  animation: fadeInText 1.2s ease-in-out forwards 0.3s;
-  margin-bottom: 30px;
+.greeting-emoji {
+  font-size: 1.5rem;
+  animation: wave 2s ease-in-out infinite;
 }
 
-.text {
-  font-size: 5.5rem;
+.greeting-text {
+  background: linear-gradient(135deg, #42b883, #3aa86f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
   color: white;
-  opacity: 0;
-  line-height: 100px;
-  animation: fadeInText 1.2s ease-in-out forwards 0.5s;
-  white-space: nowrap;
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.btn-container {
-  margin-top: 65px;
-  gap: 10px;
-  animation:
-    fadeInBtn 2s ease-in,
-    transformBtn 0.8s ease-in;
+.highlight {
+  background: linear-gradient(135deg, #42b883 0%, #3aa86f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 700px;
+  color: white;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .btn {
-  padding: 20px;
-  border: 1px solid white;
-  border-radius: 10px;
-  background-color: transparent;
-  color: white;
-  font-weight: 300;
-  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
-.btn:hover {
-  cursor: pointer;
-  background-color: #42b883;
-  border: 0px;
-  color: white;
-  transform: translateY(-2px);
+.btn-primary {
+  background: linear-gradient(135deg, #42b883 0%, #3aa86f 100%);
+  color: #181818;
+  box-shadow: 0 8px 24px rgba(66, 184, 131, 0.3);
 }
 
-.image {
-  position: absolute;
-  max-height: 85vh;
-  bottom: 0;
-  animation: showImage 0.9s ease-in;
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(66, 184, 131, 0.4);
 }
 
-.empty-div {
-  display: none;
+.btn-secondary {
+  background: rgba(66, 184, 131, 0.1);
+  color: #42b883;
+  border: 1.5px solid rgba(66, 184, 131, 0.4);
 }
 
-#tsparticles {
-  z-index: -1000;
-  animation: showParticles 3s ease-in;
+.btn-secondary:hover {
+  background: rgba(66, 184, 131, 0.15);
+  border-color: #42b883;
+  transform: translateY(-3px);
 }
 
-@keyframes slideInText {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.btn svg {
+  transition: transform 0.3s ease;
 }
 
-@keyframes showImage {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.btn:hover svg {
+  transform: translateX(4px);
 }
 
-@keyframes showParticles {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInText {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInBtn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes transformBtn {
-  0% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 1024px) {
-  .main {
-    grid-template-columns: 1fr;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    background: linear-gradient(135deg, rgba(66, 184, 131, 0.1), rgba(24, 24, 24, 0.3));
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 6rem 1.5rem 3rem;
   }
 
-  .header {
-    font-size: 1.5rem;
+  .avatar-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 1.75rem;
   }
 
-  .text {
-    font-size: 3rem;
-    padding: 15px;
-    color: white;
-    opacity: 0;
-    animation: fadeInText 1.2s ease-in-out forwards 0.5s;
+  .hero-title {
+    font-size: 2rem;
   }
 
-  .btn-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 50px;
-    gap: 20px;
+  .hero-description {
+    font-size: 1rem;
   }
 
   .btn {
     width: 100%;
-    margin-right: 0;
   }
 
-  .image {
-    display: none;
+  .hero-cta {
+    width: 100%;
   }
+}
 
-  #tsparticles {
-    display: none;
-  }
-
-  .empty-div {
-    display: block;
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 5rem 1rem 2rem;
   }
 }
 </style>

@@ -22,4 +22,12 @@ body {
 
   font-size: 15px;
   text-rendering: optimizeLegibility;
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
 }

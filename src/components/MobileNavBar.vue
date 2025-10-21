@@ -17,190 +17,156 @@ export default defineComponent({
 </script>
 
 <template>
-  <nav class="container">
-    <ul class="nav-icons">
-      <li title="Home">
-        <svg
+  <nav class="mobile-navbar">
+    <ul class="mobile-nav-menu">
+      <li>
+        <a
+          class="mobile-nav-link"
+          :class="{ active: isCurrentRoute('/') }"
           @click="handleClick('/')"
-          width="24px"
-          height="24px"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          title="Home"
         >
-          <path
-            d="M22 22L2 22"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M2 11L10.1259 4.49931C11.2216 3.62279 12.7784 3.62279 13.8741 4.49931L22 11"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M4 22V9.5"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M20 22V9.5"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393C9 14.8787 9 15.5858 9 17V22"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-          />
-          <path
-            d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"
-            :stroke="isCurrentRoute('/') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-          />
-        </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M3 12h2l8-9l8 9h2M5 10v11a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-11" />
+          </svg>
+          <span>Home</span>
+        </a>
       </li>
-      <li title="About">
-        <svg
+      <li>
+        <a
+          class="mobile-nav-link"
+          :class="{ active: isCurrentRoute('/about') }"
           @click="handleClick('/about')"
-          width="24px"
-          height="24px"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          title="About"
         >
-          <path
-            d="M8 13H16M8 13V18C8 19.8856 8 20.8284 8.58579 21.4142C9.17157 22 10.1144 22 12 22C13.8856 22 14.8284 22 15.4142 21.4142C16 20.8284 16 19.8856 16 18V13M8 13C5.2421 12.3871 3.06717 10.2687 2.38197 7.52787L2 6M16 13C17.7107 13 19.1506 14.2804 19.3505 15.9795L20 21.5"
-            :stroke="isCurrentRoute('/about') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <circle
-            cx="12"
-            cy="6"
-            r="4"
-            :stroke="isCurrentRoute('/about') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-          />
-        </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="8" r="4" />
+            <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+          </svg>
+          <span>About</span>
+        </a>
       </li>
-      <li title="Projects">
-        <svg
+      <li>
+        <a
+          class="mobile-nav-link"
+          :class="{ active: isCurrentRoute('/projects') }"
           @click="handleClick('/projects')"
-          width="24px"
-          height="24px"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          title="Projects"
         >
-          <path
-            d="M18 10L13 10"
-            :stroke="isCurrentRoute('/projects') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M10 3H16.5C16.9644 3 17.1966 3 17.3916 3.02567C18.7378 3.2029 19.7971 4.26222 19.9743 5.60842C20 5.80337 20 6.03558 20 6.5"
-            :stroke="isCurrentRoute('/projects') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-          />
-          <path
-            d="M2 6.94975C2 6.06722 2 5.62595 2.06935 5.25839C2.37464 3.64031 3.64031 2.37464 5.25839 2.06935C5.62595 2 6.06722 2 6.94975 2C7.33642 2 7.52976 2 7.71557 2.01738C8.51665 2.09229 9.27652 2.40704 9.89594 2.92051C10.0396 3.03961 10.1763 3.17633 10.4497 3.44975L11 4C11.8158 4.81578 12.2237 5.22367 12.7121 5.49543C12.9804 5.64471 13.2651 5.7626 13.5604 5.84678C14.0979 6 14.6747 6 15.8284 6H16.2021C18.8345 6 20.1506 6 21.0062 6.76946C21.0849 6.84024 21.1598 6.91514 21.2305 6.99383C22 7.84935 22 9.16554 22 11.7979V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V6.94975Z"
-            :stroke="isCurrentRoute('/projects') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-          />
-        </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+            <path d="M16 3l-4 4-4-4" />
+          </svg>
+          <span>Projects</span>
+        </a>
       </li>
-      <li title="Contact">
-        <svg
+      <li>
+        <a
+          class="mobile-nav-link"
+          :class="{ active: isCurrentRoute('/contact') }"
           @click="handleClick('/contact')"
-          width="24px"
-          height="24px"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          title="Contact"
         >
-          <path
-            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
-            :stroke="isCurrentRoute('/contact') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-          />
-          <path
-            d="M12 16V8"
-            :stroke="isCurrentRoute('/contact') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M8 14V10"
-            :stroke="isCurrentRoute('/contact') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-          <path
-            d="M16 14V10"
-            :stroke="isCurrentRoute('/contact') ? '#42b883' : 'white'"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-        </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+          </svg>
+          <span>Contact</span>
+        </a>
       </li>
     </ul>
   </nav>
 </template>
 
 <style scoped>
-.container {
-  display: flex;
-  align-items: center;
+.mobile-navbar {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 15px 24px;
-  width: 100%;
-  color: #42b883;
-  background-color: #2a2a2a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background: linear-gradient(145deg, #333333, #2a2a2a);
+  right: 0;
   z-index: 1000;
+  padding: 1rem 0;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.85) 0%, rgba(24, 24, 24, 0.95) 100%);
+  backdrop-filter: blur(8px);
+  border-top: 1.5px solid rgba(66, 184, 131, 0.15);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  display: none;
 }
 
-.container > ul {
+.mobile-nav-menu {
   display: flex;
   justify-content: space-around;
-}
-
-.container > ul > li {
-  list-style: none;
-}
-
-.nav-icons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
 }
 
-svg {
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-svg:hover {
+.mobile-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
   cursor: pointer;
-  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 12px;
+}
+
+.mobile-nav-link svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:active {
+  transform: scale(0.95);
+}
+
+.mobile-nav-link.active {
+  color: #42b883;
+  background: rgba(66, 184, 131, 0.15);
+}
+
+.mobile-nav-link.active svg {
+  filter: drop-shadow(0 0 4px rgba(66, 184, 131, 0.5));
+}
+
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: block;
+  }
 }
 </style>
