@@ -26,7 +26,7 @@ export default defineComponent({
           title: 'Career Transition',
           description:
             'Made the leap into software development, applying healthcare experience to build better user-focused applications.',
-          highlights: ['Self-Taught', 'Intensive Learning', 'Career Pivot'],
+          highlights: ['Mentored', 'Intensive Learning', 'Career Pivot'],
         },
         {
           year: '2024-Present',
