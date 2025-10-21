@@ -10,7 +10,7 @@ interface Project {
   longDesc?: string
   features: string[]
   demo: string
-  github: string
+  github?: string
 }
 
 export default defineComponent({
